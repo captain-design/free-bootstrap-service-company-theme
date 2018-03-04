@@ -1,0 +1,301 @@
+@import "../../../../node_modules/bootstrap/scss/_functions";
+@import "../../../../node_modules/bootstrap/scss/_variables";
+@import "../../../../node_modules/bootstrap/scss/_mixins";
+@import "../../../../sass/typography.scss";
+@import "../../../../sass/colors.scss";
+/* primal color*/
+$astronaut-blue: #004863;
+$shakespeare: #49BAD8; 
+
+$prime: rgb-color('blue');
+$link: rgb-color('blue');
+/*dark-gray/*blue/*orange/*violet/*brique/*sky/*apple green/*snuff
+/*radicalred/*indigo/*eminence/*mercury/*fire/*ebony
+/*carnationpink/*morningglory/*mercury/*oceangreen/*brightsun
+/*aquamarine/*tallpoppy/*purple/*puertorico/*sanmarino/*oslogray
+/*chestnut/*wuzzybrown/*straw/*iceberg/*frenchgray/*emerald*/
+$top: puertorico('top');
+$bottom: puertorico('bottom');
+/*background-content*/
+$bg-content: lighten($bottom, 49%);
+/**/
+/*theme*/
+body {
+	font-family: 'lato', sans-serif;
+}
+/*color*/
+.dark,.bg-dark {
+	color: $white!important;
+	.h0,.h1,.h2,.h3,.h4,.h5,.paragr,nav a, .graphic i, .icn i{
+		color: $white!important;
+	}
+}
+.navbar {
+	.active {
+		.nav-link {
+			border-bottom: 3px solid;
+			color: $link;
+			border-color: $link;
+		}
+	}
+}
+.navbar.fixed {
+	border-bottom: 1px solid lighten($dark, 80%);
+	.nav-link {
+		color: $dark!important;
+		&:hover {
+			color: $blue!important;
+		}
+	}
+	.navbar-brand{
+		color: $top;
+	}
+	.btn-outline {
+		border-color: $dark!important;
+	}
+}
+.bg-content {
+	background-color: $bg-content;
+}
+/*text-transform*/
+.btn,.navbar-nav,.footer .licence-link  a {
+	text-transform: uppercase;
+}
+/*buttons style********************************/
+.btn {
+	border-radius: 5px;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.btn-prime {
+	color: $white;
+	background-color: $prime;
+	border-color: $prime;
+	&:hover,&:focus {
+		color: $white;
+		background-color: darken($prime, 8%);
+		border-color:darken($prime, 8%);
+	}
+}
+.btn-outline {
+	color: $link;
+	border-color: $link;
+	background-color: transparent;
+	&:hover,&:focus {
+		color: $white;
+		background-color: darken($link, 8%);
+		border-color:darken($link, 8%);
+	}
+}
+.dark .btn-outline {
+	color: $white;
+	border-color: $white;
+	background-color: transparent;
+	&:hover,&:focus {
+		color: $dark;
+		background-color: darken($white, 8%);
+		border-color:darken($white, 8%);
+	}
+}
+.btn-basic {
+	color: $white;
+	background-color:$dark;
+	border-color:$dark;
+	&:hover,&:focus {
+		background-color: lighten($dark, 15%);
+		border-color:lighten($dark, 15%);
+	}
+}
+/*graphic*************************************/
+.dark {
+	@include diagonalGradient($top, $bottom);
+	.h0,.h1,.h2,.h3,.h4,.h5,.paragr {
+		text-shadow: 1px 1px 10px rgba(0,0,0,0.5); 
+	}
+	.navbar {
+		a {
+			&:hover {
+				color: darken($white, 15%);
+			}
+		}
+	}
+}
+.icn-circle {
+	background-color: $white;
+}
+/*box-shadow*/
+.pricing-mdl5 .item:hover ,.feature-mdl12 .item:hover,.contact-mdl7 .item:hover,.icn-circle,.social-mdl1 .item:hover {
+	background-color: $white;
+	box-shadow: 0px 7px 20px 4px lighten($dark,80%);
+}
+/**********UI elements**************/
+.feature-mdl1 {
+	.item:nth-child(1) .graphic {
+		color: rgb-color('red');
+	}
+	.item:nth-child(2) .graphic {
+		color: rgb-color('blue');
+	}
+	.item:nth-child(3) .graphic {
+		color: rgb-color('green');
+	}
+	.item:nth-child(4) .graphic {
+		color: rgb-color('orange');
+	}
+}
+.feature-mdl2 {
+	.picture-mockup {
+		border-bottom: 5px solid $prime;
+	}
+}
+.contact-mdl7 {
+	.item:nth-child(1) .graphic i {
+		color: rgb-color('green');
+	}
+	.item:nth-child(2) .graphic i {
+		color: rgb-color('orange');
+	}
+	.item:nth-child(3) .graphic i {
+		color: rgb-color('blue');
+	}
+}
+.pricing-mdl5 {
+	.item {
+		border-radius: 15px;
+		border: 1px solid lighten($dark, 80%);
+	}
+	.btn-outline {
+		color: $prime;
+		border:1px solid $prime;
+		&:hover {
+			color: $white;
+			background-color:darken($prime, 10%);
+		}
+	}
+	.premium {
+		.title {color: $prime;}
+		.price {color: $prime;}
+		.btn {
+			background-color:$prime;
+			&:hover,&:focus {
+				background-color: darken($prime, 8%) ;
+				border-color:darken($prime, 8%) ;
+			}
+		}
+	}
+	.features-list {
+		i {
+			color: $prime;
+		}
+	}
+}
+.social-mdl1 {
+	.item {
+		border-radius: 10px;
+	}
+}
+.footer {
+	&.bg-dark {
+		background-color: darken(#004863, 10%)!important;
+		.icn-circle {
+			background-color:$bottom!important;
+			box-shadow: none;
+			&:hover {
+				background-color: rgba(255,255,255,0.5);
+				i {
+					color: $prime;
+				}
+			}
+			i {
+				color: #fff;
+			}
+		}
+		hr { border-top-color: lighten($top, 10%); }
+		strong,.paragr {
+			display: block;
+			opacity: 0.7;
+		}
+	}
+	nav a {
+		opacity: 0.5;
+		color: #000;
+		&:hover {
+			color:$prime!important;
+			opacity: 1;
+		}
+	}
+	.social {
+		a {
+			color: #212121;
+			&:hover {
+				color:#007bff;
+			}
+		}
+	}
+	.paragr {
+		color: #999;
+	}
+	.licence-link {
+		a {
+			color: #999;
+			&:hover {
+				color:$prime;
+			}
+		}
+	}
+}
+/*.theme1*/
+
+/*color*/
+.h2 {
+	color: darken($top,25%);
+}
+.h3, .h4 {
+	color: lighten($dark,15%);
+}
+.feature-mdl12 .h3 {
+	color: lighten($top,15%);
+}
+.icn-circle {
+	@include diagonalGradient($top, $bottom);
+	strong {
+		color: $white;
+	}
+	
+}
+.graphic {
+	i {
+		color: darken($top,17%);
+	}
+}
+.paragr {
+	color: lighten($dark, 35%);
+}
+/*overide*/
+/*.hero .bg-hero {
+	filter: none!important;
+}*/
+/*.graphic {
+	i {
+		@include font-size($graphic-icon-xl-font-sizes);
+	}
+}
+.social-mdl1, .contact-mdl7 {
+	.graphic {
+		i {
+			@include font-size($graphic-icon-font-sizes);
+		}
+	}
+}*/
+/*font-weight*/
+/*.navbar-brand {
+	font-weight: 400;
+}
+.h0,.h1,.h2,.h3,.h4,.btn.btn-prime,.btn-outline {
+	font-weight: 500;
+}
+.h5,.btn,.btn.lg-btn,.btn.md-btn {
+	font-weight: 500;
+}
+.paragr {
+	font-weight: 400;
+}*/

@@ -1,0 +1,169 @@
+$breakpoints: (
+  small : 768px,
+  medium: 992px,
+  large : 1200px
+);
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      @include make-font-size($fs-font-size);
+    }
+    @else {
+      // If $fs-font-size is a key that exists in
+      // $fs-breakpoints, use the value
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        @include make-font-size($fs-font-size);
+      }
+    }
+  }
+}
+// Utility function for mixin font-size
+@mixin make-font-size($fs-font-size) {
+  // If $fs-font-size is a list, include
+  // both font-size and line-height
+  @if type-of($fs-font-size) == "list" {
+    font-size: nth($fs-font-size, 1);
+    @if (length($fs-font-size) > 1) {
+      line-height: nth($fs-font-size, 2);
+    }
+  }
+  @else {
+    font-size: $fs-font-size;
+  }
+}
+/*maps*/
+$h0-font-sizes: (
+  null  : (2.8rem,1.2),
+  medium: (3.7rem),
+  large : (4.8rem),
+);
+$h1-font-sizes: (
+  null  : (2rem,1.5),
+  small  : (2.3rem),
+  medium: (2.6rem),
+  large : (3rem),
+);
+$h2-font-sizes: (
+  null  : (2rem,1.5),
+  medium: (2.3rem),
+  large : (2.6rem),
+);
+$h3-font-sizes: (
+  null  : (1.4rem,1.5),
+  medium: (1.6rem),
+  large : (1.9rem),
+);
+$h4-font-sizes: (
+  null  : (1.2rem,1.5),
+  medium: (1.3rem),
+);
+$h5-font-sizes: (
+  null  : (1.1rem,1.5),
+  medium: (1.25rem),
+);
+$paragraph-font-sizes: (
+  null  : (1rem,1.5),
+  medium: (1.15rem),
+);
+$navbar-font-sizes: (
+  null  : (2rem,1.5),
+  medium: (1rem),
+);
+$button-font-sizes: (
+   null: (0.9rem),
+);
+$button-medium-font-sizes: (
+  null  : (0.9rem),
+  medium: (1rem),
+);
+$button-large-font-sizes: (
+  null  : (1rem),
+  medium: (1.1rem),
+);
+$graphic-icon-circle-font-sizes: (
+  null  : (1.5rem),
+  medium: (2rem),
+);
+$graphic-icon-font-sizes: (
+  null  : (2rem),
+  medium: (2.5rem),
+);
+$graphic-icon-xl-font-sizes: (
+  null  : (3rem),
+  medium: (4.5rem),
+);
+$graphic-text-font-sizes: (
+  null  : (1rem),
+  medium: (1.7rem),
+);
+/*font-size*/
+.h0 {
+  @include font-size($h0-font-sizes);
+}
+.h1 {
+  @include font-size($h1-font-sizes);
+}
+.h2 {
+  @include font-size($h2-font-sizes);
+}
+.h3 {
+  @include font-size($h3-font-sizes);
+}
+.h4 {
+  @include font-size($h4-font-sizes);
+}
+.h5 {
+  @include font-size($h5-font-sizes);
+}
+.paragr {
+  @include font-size($paragraph-font-sizes);
+}
+.navbar-nav {
+	@include font-size($navbar-font-sizes);
+}
+.navbar-brand {
+	@include font-size($h3-font-sizes);
+}
+.btn {
+  @include font-size($button-font-sizes);
+}
+.md-btn {
+  @include font-size($button-medium-font-sizes);
+}
+.lg-btn {
+  @include font-size($button-large-font-sizes);
+}
+.graphic {
+	i {@include font-size($graphic-icon-font-sizes);}
+}
+.graphic.icn-circle {
+	strong {@include font-size($graphic-text-font-sizes);}
+	i {@include font-size($graphic-icon-circle-font-sizes);}
+}
+/*exeptions*/
+.footer .links a {
+	font-size: 1rem;
+}
+.footer .social a,.footer .licence-link a,.footer .icn-circle i {
+	font-size: 1.2rem;
+}
+/*font-weight*/
+.navbar-brand {
+	font-weight: 900;
+}
+.h0,.h1,.h2,.h3,.h4,.btn.btn-prime,.btn-outline {
+	font-weight: 700;
+}
+.h5,.btn,.btn.lg-btn,.btn.md-btn {
+	font-weight: 500;
+}
+.paragr {
+	font-weight: 400;
+}
+/*text-transform*/
+.btn,.navbar-nav,.footer .licence-link  a {
+	text-transform: uppercase;
+}

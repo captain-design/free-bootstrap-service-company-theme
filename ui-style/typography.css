@@ -1,0 +1,139 @@
+/*maps*/
+/*font-size*/
+.h0 {
+  font-size: 2.8rem;
+  line-height: 1.2; }
+  @media screen and (min-width: 992px) {
+    .h0 {
+      font-size: 3.7rem; } }
+  @media screen and (min-width: 1200px) {
+    .h0 {
+      font-size: 4.8rem; } }
+
+.h1 {
+  font-size: 2rem;
+  line-height: 1.5; }
+  @media screen and (min-width: 768px) {
+    .h1 {
+      font-size: 2.3rem; } }
+  @media screen and (min-width: 992px) {
+    .h1 {
+      font-size: 2.6rem; } }
+  @media screen and (min-width: 1200px) {
+    .h1 {
+      font-size: 3rem; } }
+
+.h2 {
+  font-size: 2rem;
+  line-height: 1.5; }
+  @media screen and (min-width: 992px) {
+    .h2 {
+      font-size: 2.3rem; } }
+  @media screen and (min-width: 1200px) {
+    .h2 {
+      font-size: 2.6rem; } }
+
+.h3 {
+  font-size: 1.4rem;
+  line-height: 1.5; }
+  @media screen and (min-width: 992px) {
+    .h3 {
+      font-size: 1.6rem; } }
+  @media screen and (min-width: 1200px) {
+    .h3 {
+      font-size: 1.9rem; } }
+
+.h4 {
+  font-size: 1.2rem;
+  line-height: 1.5; }
+  @media screen and (min-width: 992px) {
+    .h4 {
+      font-size: 1.3rem; } }
+
+.h5 {
+  font-size: 1.1rem;
+  line-height: 1.5; }
+  @media screen and (min-width: 992px) {
+    .h5 {
+      font-size: 1.25rem; } }
+
+.paragr {
+  font-size: 1rem;
+  line-height: 1.5; }
+  @media screen and (min-width: 992px) {
+    .paragr {
+      font-size: 1.15rem; } }
+
+.navbar-nav {
+  font-size: 2rem;
+  line-height: 1.5; }
+  @media screen and (min-width: 992px) {
+    .navbar-nav {
+      font-size: 1rem; } }
+
+.navbar-brand {
+  font-size: 1.4rem;
+  line-height: 1.5; }
+  @media screen and (min-width: 992px) {
+    .navbar-brand {
+      font-size: 1.6rem; } }
+  @media screen and (min-width: 1200px) {
+    .navbar-brand {
+      font-size: 1.9rem; } }
+
+.btn {
+  font-size: 0.9rem; }
+
+.md-btn {
+  font-size: 0.9rem; }
+  @media screen and (min-width: 992px) {
+    .md-btn {
+      font-size: 1rem; } }
+
+.lg-btn {
+  font-size: 1rem; }
+  @media screen and (min-width: 992px) {
+    .lg-btn {
+      font-size: 1.1rem; } }
+
+.graphic i {
+  font-size: 2rem; }
+  @media screen and (min-width: 992px) {
+    .graphic i {
+      font-size: 2.5rem; } }
+
+.graphic.icn-circle strong {
+  font-size: 1rem; }
+  @media screen and (min-width: 992px) {
+    .graphic.icn-circle strong {
+      font-size: 1.7rem; } }
+
+.graphic.icn-circle i {
+  font-size: 1.5rem; }
+  @media screen and (min-width: 992px) {
+    .graphic.icn-circle i {
+      font-size: 2rem; } }
+
+/*exeptions*/
+.footer .links a {
+  font-size: 1rem; }
+
+.footer .social a, .footer .licence-link a, .footer .icn-circle i {
+  font-size: 1.2rem; }
+
+/*font-weight*/
+.navbar-brand {
+  font-weight: 900; }
+
+.h0, .h1, .h2, .h3, .h4, .btn.btn-prime, .btn-outline {
+  font-weight: 700; }
+
+.h5, .btn, .btn.lg-btn, .btn.md-btn {
+  font-weight: 500; }
+
+.paragr {
+  font-weight: 400; }
+
+/*text-transform*/
+.btn, .navbar-nav, .footer .licence-link a {
+  text-transform: uppercase; }

@@ -1,0 +1,277 @@
+@mixin diagonalGradient($top, $bottom){
+    background: $top; /* Old browsers */
+	background: -moz-linear-gradient(-205deg, $top 0%, $bottom 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-205deg, $top 0%,$bottom 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(-205deg, $top 0%,$bottom 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$bottom',GradientType=1 );
+}
+/*vertical gradient*/
+@mixin verticalGradient($top, $bottom){
+    background: $top; /* Old browsers */
+	background: -moz-linear-gradient(top, $top 0%, $bottom 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, $top 0%,$bottom 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, $top 0%,$bottom 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$bottom',GradientType=1 );
+}
+/*basic*/
+$dark: #212121;
+$white: #fff;
+$blue : #007bff;
+
+$rgb-color: (
+  'red': #E32636,
+  'blue': #2687E8,
+  'green': #54921C,
+  'orange': #F3721B 
+);
+@function rgb-color($key: 'red') {
+  @return map-get($rgb-color, $key);
+}
+
+$dark-gray: (
+  'top': #18191E,
+  'bottom': #545a73
+);
+@function dark-gray($key: 'prime') {
+  @return map-get($dark-gray, $key);
+}
+
+$gradien-blue: (
+  'top': #3498DB,
+  'bottom': #E0F8D8
+);
+@function gradien-blue($key: 'prime') {
+  @return map-get($gradien-blue, $key);
+}
+
+$gradien-orange: (
+  'top': #e74c3c,
+  'bottom': #f1c40f
+);
+@function gradien-orange($key: 'prime') {
+  @return map-get($gradien-orange, $key);
+}
+
+$gradien-violet: (
+  'top': #964496,
+  'bottom': #586eca
+);
+@function gradien-violet($key: 'prime') {
+  @return map-get($gradien-violet, $key);
+}
+
+$brique: (
+  'top': #c24947,
+  'bottom': #e74c3c
+);
+@function brique($key: 'prime') {
+  @return map-get($brique, $key);
+}
+
+$sky: (
+  'top': #01d9fe,
+  'bottom': #1558f3
+);
+@function sky($key: 'prime') {
+  @return map-get($sky, $key);
+}
+
+$apple: (
+  'top': #a4e786,
+  'bottom': #5ad427
+);
+@function apple($key: 'prime') {
+  @return map-get($apple, $key);
+}
+
+$snuff: (
+  'top': #dadaef,
+  'bottom': #8e9198
+);
+@function snuff($key: 'prime') {
+  @return map-get($snuff, $key);
+}
+
+$radicalred: (
+  'top': #ff2e5e,
+  'bottom': #c72500
+);
+@function radicalred($key: 'prime') {
+  @return map-get($radicalred, $key);
+}
+
+$indigo: (
+  'top': #ff2e5e,
+  'bottom': #c72500
+);
+@function indigo($key: 'prime') {
+  @return map-get($indigo, $key);
+}
+
+$eminence: (
+  'top': #602f83,
+  'bottom': #913062
+);
+@function eminence($key: 'prime') {
+  @return map-get($eminence, $key);
+}
+
+$mercury: (
+  'top': #4cd964,
+  'bottom': #e6e6e6
+);
+@function mercury($key: 'prime') {
+  @return map-get($mercury, $key);
+}
+
+$fire: (
+  'top': #e96e16,
+  'bottom': #ae2d04
+);
+@function fire($key: 'prime') {
+  @return map-get($fire, $key);
+}
+
+$ebony: (
+  'top': #6b6b6b,
+  'bottom': #030207
+);
+@function ebony($key: 'prime') {
+  @return map-get($ebony, $key);
+}
+
+$carnationpink: (
+  'top': #ffa1bc,
+  'bottom': #f75164
+);
+@function carnationpink($key: 'prime') {
+  @return map-get($carnationpink, $key);
+}
+
+$morningglory: (
+  'top': #96d7da,
+  'bottom': #2d77c2
+);
+@function morningglory($key: 'prime') {
+  @return map-get($morningglory, $key);
+}
+
+$mercury: (
+  'top': #808080,
+  'bottom': #e5e5e5
+);
+@function mercury($key: 'prime') {
+  @return map-get($mercury, $key);
+}
+
+$oceangreen: (
+  'top': #61a139,
+  'bottom': #3ab077
+);
+@function oceangreen($key: 'prime') {
+  @return map-get($oceangreen, $key);
+}
+
+$brightsun: (
+  'top': #ffa1bc,
+  'bottom': #eebb0a
+);
+@function brightsun($key: 'prime') {
+  @return map-get($brightsun, $key);
+}
+
+$aquamarine: (
+  'top': #40ffd8,
+  'bottom': #4cadd4
+);
+@function aquamarine($key: 'prime') {
+  @return map-get($aquamarine, $key);
+}
+
+$tallpoppy: (
+  'top': #ff545e,
+  'bottom': #bd2328
+);
+@function tallpoppy($key: 'prime') {
+  @return map-get($tallpoppy, $key);
+}
+
+$purple: (
+  'top': #ff647b,
+  'bottom': #ff647b
+);
+@function purple($key: 'prime') {
+  @return map-get($purple, $key);
+}
+
+$puertorico: (
+  'top': #3dbfbd,
+  'bottom': #3db547
+);
+@function puertorico($key: 'prime') {
+  @return map-get($puertorico, $key);
+}
+
+$sanmarino: (
+  'top': #cf7ed0,
+  'bottom': #506aba
+);
+@function sanmarino($key: 'prime') {
+  @return map-get($sanmarino, $key);
+}
+
+$oslogray: (
+  'top': #878f92,
+  'bottom': #002431
+);
+@function oslogray($key: 'prime') {
+  @return map-get($oslogray, $key);
+}
+
+$chestnut: (
+  'top': #b25948,
+  'bottom': #5e57c6
+);
+@function chestnut($key: 'prime') {
+  @return map-get($chestnut, $key);
+}
+
+$wuzzybrown: (
+  'top': #c65e57,
+  'bottom': #873630
+);
+@function wuzzybrown($key: 'prime') {
+  @return map-get($wuzzybrown, $key);
+}
+
+$straw: (
+  'top': #d8c786,
+  'bottom': #75662a
+);
+@function straw($key: 'prime') {
+  @return map-get($straw, $key);
+}
+
+$iceberg: (
+  'top': #d8f3ee,
+  'bottom': #808080
+);
+@function iceberg($key: 'prime') {
+  @return map-get($iceberg, $key);
+}
+
+$frenchgray: (
+  'top': #BDBEC2,
+  'bottom': #1F1F21
+);
+@function frenchgray($key: 'prime') {
+  @return map-get($frenchgray, $key);
+}
+
+$emerald: (
+  'top': #40c081,
+  'bottom': #1b4c34
+);
+@function emerald($key: 'prime') {
+  @return map-get($emerald, $key);
+}
